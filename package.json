@@ -1,0 +1,25 @@
+{
+  "name": "nodesjs-postgresql-keycloak",
+  "version": "1.0.0",
+  "description": "Microservice Api for Openshift Container",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MehmetVural/nodesjs-postgresql-keycloak.git"
+  },
+  "keywords": [],
+  "author": "Mehmet Ali Vural<mehmet.vural@spotlightenterprise.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MehmetVural/nodesjs-postgresql-keycloak/issues"
+  },
+  "homepage": "https://github.com/MehmetVural/nodesjs-postgresql-keycloak#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "express": "^4.17.1"
+  }
+}
