@@ -9,7 +9,7 @@ const NewsController = require("../controllers/news-controller");
 router.get("/", NewsController.readAll);
 //router.post("/", NewsController.create);
 //router.delete("/:id", NewsController.delete);
-//router.get("/:id", NewsController.readById);
+router.get("/:id", NewsController.readById);
 //router.patch("/:id", NewsController.update);
 
 module.exports = router;

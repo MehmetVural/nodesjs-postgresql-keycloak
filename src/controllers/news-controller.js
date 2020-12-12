@@ -179,18 +179,40 @@ exports.readAll = async (req, res, next) => {
   try {
     const news = await NewsDAO.readAll();
     return res.status(200).json({
-        news
+      news
     });
   } catch (err) {
     debug(err);
 
     return res.status(500).json({
-      message: err +"-Error when trying to Read All Restaurant."
+      message: err + "-Error when trying to Read All News."
     });
   }
 };
-/*
 
+exports.readById = async (req, res, next) => {
+  try {
+    const { headers, params } = req;
+    const { id } = params;
+
+
+    const news = await NewsDAO.readById(id);
+    //console.log(news[0].page_id);
+  
+    return res.status(200).json({
+      news: news[0]
+    });
+  } catch (err) {
+    debug(err);
+
+    return res.status(500).json({
+      message: "Error when trying to Read News."
+    });
+  }
+};
+
+
+/*
 exports.readById = async (req, res, next) => {
   try {
     const { headers, params } = req;
@@ -228,6 +250,8 @@ exports.readById = async (req, res, next) => {
     });
   }
 };
+
+
 
 exports.update = async (req, res, next) => {
   try {

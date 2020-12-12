@@ -1,3 +1,7 @@
+
+// require db connection
+const dbclient = require("../db");
+
 //const mongoose = require("mongoose");
 
 //const RestaurantModel = require("../models/Restaurant");
@@ -28,23 +32,28 @@ exports.createInBatch = async restaurants => {
 exports.readAll = async () => {
   try {
     //return await Restaurant.find({});
-    return "This is News"; 
+    const news = dbclient.query("SELECT * FROM pages")
+    console.log((await news).rows);
+    return (await news).rows;
     
   } catch (err) {
     throw err;
     
+  }
+};
+
+exports.readById = async id => {
+  try {
+    console.log(id)
+    const news = dbclient.query("SELECT * FROM pages WHERE page_id = $1", [id]);
+    //console.log((await news).rows);
+    return  (await news).rows;
+  } catch (err) {
+    throw err;
   }
 };
 
 /*
-exports.readById = async id => {
-  try {
-    return await Restaurant.findById(id);
-  } catch (err) {
-    throw err;
-  }
-};
-
 exports.update = async (id, data) => {
   try {
     return await Restaurant.findByIdAndUpdate(

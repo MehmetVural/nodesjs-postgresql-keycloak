@@ -18,7 +18,16 @@
     "url": "https://github.com/MehmetVural/nodesjs-postgresql-keycloak/issues"
   },
   "homepage": "https://github.com/MehmetVural/nodesjs-postgresql-keycloak#readme",
-  "dependencies": {},
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dot-env": "^0.0.1",
+    "dotenv": "^8.2.0",
+    "express-session": "^1.17.1",
+    "keycloak-connect": "^11.0.3",
+    "nodeman": "^1.1.2",
+    "nodemon": "^2.0.6",
+    "pg": "^8.5.1"
+  },
   "devDependencies": {
     "express": "^4.17.1"
   }
