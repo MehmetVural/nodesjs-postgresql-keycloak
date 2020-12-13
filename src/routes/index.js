@@ -31,6 +31,6 @@ router.use("/home",require("./home"));
 
 
 //keycloak.protect(),  keycloak.protect('realm:admin'),
-router.use("/news", keycloak.protect(), require("./news"));
+router.use("/news", require("./news"));
 
 module.exports = router;
