@@ -8,6 +8,9 @@ CREATE DATABASE workbc
     TABLESPACE = pg_default
     CONNECTION LIMIT = -1;
 
+CREATE USER youruser WITH ENCRYPTED PASSWORD 'yourpass';
+GRANT ALL PRIVILEGES ON DATABASE yourdbname TO youruser;
+
 -- Crete Table
 DROP TABLE pages;
 CREATE TABLE pages (
