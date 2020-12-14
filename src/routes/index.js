@@ -31,7 +31,7 @@ router.use("/home",require("./home"));
 
 
 //keycloak.protect(),  keycloak.protect('realm:admin'),
-router.use("/news", keycloak.protect(), require("./news"));
+router.use("/news", require("./news"));
 router.get("/dbconfig", function (req, res) {
   res.send(process.env.DB_HOST + ":" + process.env.DB_PORT +":" + process.env.DB_DATABASE +":" + process.env.DB_USER );
 });
